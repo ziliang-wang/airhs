@@ -1,0 +1,13 @@
+module.exports = {
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'https://test.elf.com.tw:5051',
+        changeOrigin: true,
+        pathRewrite: {
+          // '^/api': ''
+        }
+      }
+    }
+  }
+}
